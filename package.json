@@ -1,0 +1,37 @@
+{
+  "name": "google-pay-gully-cricket-cards-sharing-app",
+  "version": "0.1.0",
+  "description": "App for sharing gully cricket cards in google pay campaign",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "jest"
+  },
+  "dependencies": {
+    "googleapis": "^100.0.0",
+    "next": "^12.1.6",
+    "next-pwa": "^5.5.2",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.7",
+    "eslint": "8.15.0",
+    "eslint-config-next": "12.1.6",
+    "jest": "^28.1.0",
+    "postcss": "^8.4.13",
+    "tailwindcss": "^3.0.24"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KManiKumarReddy/google-pay-gully-cricket-cards-sharing-app.git"
+  },
+  "author": "Mani Kumar Reddy Kancharla",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/KManiKumarReddy/google-pay-gully-cricket-cards-sharing-app/issues"
+  },
+  "homepage": "https://gpay-gully-cricket-cards.kmanikumarreddy.com"
+}
