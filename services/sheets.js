@@ -1,11 +1,20 @@
 const { google } = require('googleapis');
-const { GoogleAuth } = require('google-auth-library');
 
+const googleAuth = new google.auth.GoogleAuth()
 
-const auth = new GoogleAuth({
-    keyFile: 'credentials.json',
-    scopes: ['https://www.googleapis.com/auth/spreadsheets'],
+const auth = googleAuth.fromJSON({
+    type: process.env.GOOGLE_CREDS_type,
+    project_id: process.env.GOOGLE_CREDS_project_id,
+    private_key_id: process.env.GOOGLE_CREDS_private_key_id,
+    private_key: process.env.GOOGLE_CREDS_private_key.replace(new RegExp("\\\\n", "\g"), "\n"),
+    client_email: process.env.GOOGLE_CREDS_client_email,
+    client_id: process.env.GOOGLE_CREDS_client_id,
+    auth_uri: process.env.GOOGLE_CREDS_auth_uri,
+    token_uri: process.env.GOOGLE_CREDS_token_uri,
+    auth_provider_x509_cert_url: process.env.GOOGLE_CREDS_auth_provider_x509_cert_url,
+    client_x509_cert_url: process.env.GOOGLE_CREDS_client_x509_cert_url,
 });
+auth.scopes = ['https://www.googleapis.com/auth/spreadsheets']
 const sheetsAPI = google.sheets({ version: 'v4', auth });
 const spreadsheetId = '1zNttUmLB9m_sHwHWofBPRtvJUKJnQN64EqplYPatIVM'
 

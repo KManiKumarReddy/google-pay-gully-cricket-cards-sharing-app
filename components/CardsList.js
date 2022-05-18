@@ -15,9 +15,12 @@ export default function CardsList() {
 
 function Card({ name, count, imageUrl }) {
 
+    const [currentCount, setCurrentCount] = useState(count)
+
     const claimCard = async () => {
-        // const url = await fetch(`/api/claim/`, { method: 'POST', body: name }).then((res) => res.json())
-        // window.location.href = url
+        const { url } = await fetch(`/api/claim`, { method: 'POST', body: name }).then((res) => res.json())
+        setCurrentCount((prevCount) => prevCount - 1)
+        window.location.href = url
     }
     return <div className={`container cursor-pointer rounded-lg  ${count == 0 ? 'grayscale' : ''}`} onClick={claimCard}>
         <div className="relative text-center">
@@ -29,7 +32,7 @@ function Card({ name, count, imageUrl }) {
                 height={420}
             />
             <span className="absolute top-0 right-0 px-2 py-1 -mr-2 -mt-2 text-xs font-bold leading-none text-red-100 bg-red-600 rounded-full">
-                {count}</span>
+                {currentCount}</span>
         </div>
     </div>
 }
