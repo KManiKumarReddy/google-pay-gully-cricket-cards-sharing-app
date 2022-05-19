@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import Script from "next/script";
 import '../styles/globals.css'
 
@@ -61,6 +62,12 @@ export default function MyApp({ Component, pageProps }) {
         </Script>
         <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5635149151051950"
             crossorigin="anonymous" strategy="afterInteractive"></Script>
-        <Component {...pageProps} />
+        <div className="container mx-auto min-h-screen">
+            <Component {...pageProps} />
+        </div>
+        <footer className="flex p-3 gap-2">
+            <Link href={'/terms'}>Terms</Link>
+            <Link href={'/privacy'}>Privacy</Link>
+        </footer>
     </>
 }
