@@ -22,12 +22,14 @@ function HomePage() {
         </div>
     }
 
-    return <div className="container px-5 text-center mx-auto">
+    return <div className="container p-5 text-center mx-auto bg-gradient-to-r from-orange-400 to-rose-400 text-indigo-800">
+        <h3>New cards every morning 9AM</h3>
         <CardsList />
+        <p className="text-md">Send your extra cards to get new cards (daily 3) 👇 </p>
+        <p className="text-sm">PS: Feel free to gift more and help others</p>
         <a href="https://gpay.app.goo.gl/ZyUD33">
-            <button className="rounded-lg bg-blue-500 text-white text-center p-1">
-                <p className="text-lg">Please send your extra cards by clicking here</p>
-                <p className="text-sm">You will receive new cards when someone claims your card</p>
+            <button className="rounded-full bg-white text-orange-400 text-center py-1 px-16 mt-2 animate-bounce">
+                Gift
             </button>
         </a>
     </div >

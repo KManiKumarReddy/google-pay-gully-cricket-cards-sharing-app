@@ -1,6 +1,8 @@
 import Head from "next/head";
+import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
+import ShareIcons from "../components/ShareIcons";
 import '../styles/globals.css'
 
 export default function MyApp({ Component, pageProps }) {
@@ -50,6 +52,9 @@ export default function MyApp({ Component, pageProps }) {
             <link rel='apple-touch-startup-image' href='/images/apple_splash_1242.png' sizes='1242x2208' />
             <link rel='apple-touch-startup-image' href='/images/apple_splash_750.png' sizes='750x1334' />
             <link rel='apple-touch-startup-image' href='/images/apple_splash_640.png' sizes='640x1136' />
+
+            <meta name='og:image' content="https://www.coolztricks.com/wp-content/uploads/2021/09/photo_2022-05-13-09.59.14.jpeg" />
+
         </Head>
         <Script async src="https://www.googletagmanager.com/gtag/js?id=G-TK2PY77NH7" strategy="afterInteractive"></Script>
         <Script id="google-analytics" strategy="afterInteractive">
@@ -62,12 +67,20 @@ export default function MyApp({ Component, pageProps }) {
         </Script>
         <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5635149151051950"
             crossorigin="anonymous" strategy="afterInteractive"></Script>
-        <div className="container mx-auto min-h-screen">
-            <Component {...pageProps} />
+        <h1 className="bg-blue-500 text-white text-center text-xl">🏏 GooglePay Gully Cricket Game Offer : Collect Cards & Earn Assured ₹51 to ₹201</h1>
+        <Component {...pageProps} />
+        <div className="bg-blue-400">
+            <ShareIcons />
         </div>
         <footer className="flex p-3 gap-2">
             <Link href={'/terms'}>Terms</Link>
             <Link href={'/privacy'}>Privacy</Link>
+            <a href='https://github.com/KManiKumarReddy/google-pay-gully-cricket-cards-sharing-app/blob/master/LICENSE'>License{' '}
+                <Image
+                    src="http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-2.png"
+                    width={80} height={15} alt="WTFPL" />
+            </a>
+            <a href="https://www.kmanikumarreddy.com">Developed by Mani</a>
         </footer>
     </>
 }
