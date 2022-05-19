@@ -16,7 +16,7 @@ const auth = googleAuth.fromJSON({
 });
 auth.scopes = ['https://www.googleapis.com/auth/spreadsheets']
 const sheetsAPI = google.sheets({ version: 'v4', auth });
-const spreadsheetId = '1zNttUmLB9m_sHwHWofBPRtvJUKJnQN64EqplYPatIVM'
+const spreadsheetId = process.env.SPREADSHEET_ID
 
 const getCounts = async () => {
     const res = await sheetsAPI.spreadsheets.values.get({
@@ -36,6 +36,7 @@ const claim = async (cardName) => {
             spreadsheetId,
         }).then(res => res.data.sheets)
         const sheetId = sheets.find(sheet => sheet.properties.title === cardName)?.properties?.sheetId
+        const userCardsSheetId = sheets.find(sheet => sheet.properties.title === 'UsedCards')?.properties?.sheetId
         await sheetsAPI.spreadsheets.batchUpdate({
             spreadsheetId,
             requestBody: {
@@ -48,6 +49,34 @@ const claim = async (cardName) => {
                                 startIndex: 0,
                                 endIndex: 1
                             }
+                        }
+                    },
+                    {
+                        appendCells: {
+                            sheetId: userCardsSheetId,
+                            rows: [
+                                {
+                                    values: [
+                                        {
+                                            userEnteredValue: { stringValue: res.data.values[0][0] },
+                                            textFormatRuns: [
+                                                {
+                                                    startIndex: 0,
+                                                    format: {
+                                                        link: {
+                                                            uri: res.data.values[0][0]
+                                                        }
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            userEnteredValue: { stringValue: cardName }
+                                        }
+                                    ]
+                                }
+                            ],
+                            fields: '*'
                         }
                     }
                 ],

@@ -4,3 +4,6 @@ out
 credentials.json
 
 .env.development
+.env.local
+.env
+.env.production
