@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Script from "next/script";
 import '../styles/globals.css'
 
 export default function MyApp({ Component, pageProps }) {
@@ -49,6 +50,17 @@ export default function MyApp({ Component, pageProps }) {
             <link rel='apple-touch-startup-image' href='/images/apple_splash_750.png' sizes='750x1334' />
             <link rel='apple-touch-startup-image' href='/images/apple_splash_640.png' sizes='640x1136' />
         </Head>
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-TK2PY77NH7" strategy="afterInteractive"></Script>
+        <Script id="google-analytics" strategy="afterInteractive">
+            {`window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+
+                gtag('config', 'G-TK2PY77NH7');
+`}
+        </Script>
+        <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5635149151051950"
+            crossorigin="anonymous" strategy="afterInteractive"></Script>
         <Component {...pageProps} />
     </>
 }
