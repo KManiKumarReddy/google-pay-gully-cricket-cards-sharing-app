@@ -47,6 +47,11 @@ function Card({ name, count, imageUrl }) {
             const { url } = await fetch(`/api/claim`, { method: 'POST', body: name }).then((res) => res.json())
             setLoading(false)
             setCurrentCount((prevCount) => prevCount - 1)
+            gtag('event', 'click', {
+                'event_category': 'engagement',
+                'event_label': 'card_name',
+                'value': name
+            });
             window.open(url, '_blank')
         }
         else {
