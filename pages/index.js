@@ -11,13 +11,16 @@ const mobileCheck = () => {
 
 function AddToCalendarButton() {
     useEffect(atcb_init, [])
+    const date = new Date()
+    if (date.getUTCHours() > 3)
+        date.setTime(date.getTime() + 24 * 60 * 60 * 1000)
     return (
         <div className='atcb' style={{ display: 'none' }}>
             {JSON.stringify({
                 name: "GPay Gully Cricket Cards Giveaway",
                 location: "https://gpay-gully-cricket.kmanikumarreddy.com/",
-                startDate: "2022-05-21",
-                endDate: "2022-05-31",
+                startDate: date.toISOString().substring(0, 10),
+                endDate: date.toISOString().substring(0, 10),
                 startTime: "08:59",
                 endTime: "09:05",
                 options: ['Apple', 'Google', 'iCal', 'Microsoft365', 'Outlook.com', 'MicrosoftTeams', 'Yahoo'],
