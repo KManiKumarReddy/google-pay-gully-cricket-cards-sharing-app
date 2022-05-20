@@ -10,6 +10,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "add-to-calendar-button": "^1.8.6",
     "googleapis": "^100.0.0",
     "next": "^12.1.6",
     "next-pwa": "^5.5.2",
