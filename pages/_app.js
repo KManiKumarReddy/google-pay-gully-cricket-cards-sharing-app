@@ -19,6 +19,7 @@ export default function MyApp({ Component, pageProps }) {
             <meta name='msapplication-TileColor' content='#2B5797' />
             <meta name='msapplication-tap-highlight' content='no' />
             <meta name='theme-color' content='#000000' />
+            <title>Google Pay Gully Cricket Cards Sharing App</title>
 
             <link rel='apple-touch-icon' href='/icons/apple-touch-icon.png' />
 
