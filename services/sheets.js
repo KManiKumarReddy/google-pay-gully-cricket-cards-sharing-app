@@ -87,7 +87,35 @@ const claim = async (cardName) => {
     return null
 }
 
+const deleteFirstColumnInEachSheet = async () => {
+    const sheets = await sheetsAPI.spreadsheets.get({
+        spreadsheetId,
+    }).then(res => res.data.sheets).map(sheet => sheet?.properties)
+
+    const requests = sheets.filter(({ title }) => (title !== 'UsedCards' && title !== 'Counts')).map(
+        ({ sheetId }) => (
+            {
+                deleteDimension: {
+                    range: {
+                        sheetId,
+                        dimension: 'COLUMNS',
+                        startIndex: 0,
+                        endIndex: 1
+                    }
+                }
+            })
+    )
+    await sheetsAPI.spreadsheets.batchUpdate({
+        spreadsheetId,
+        requestBody: {
+            requests: requests
+        },
+    })
+}
+
+
 module.exports = {
     getCounts,
-    claim
+    claim,
+    deleteFirstColumnInEachSheet
 }
