@@ -8,18 +8,19 @@ import '../styles/globals.css'
 export default function MyApp({ Component, pageProps }) {
     return <>
         <Head>
-            <meta name='application-name' content='Google Pay Gully Cricket Cards Sharing App' />
+            <meta name='application-name' content='GooglePay Gully Cricket Game Cards [Giveaway] : Assured ₹51 to ₹201' />
             <meta name='apple-mobile-web-app-capable' content='yes' />
             <meta name='apple-mobile-web-app-status-bar-style' content='default' />
-            <meta name='apple-mobile-web-app-title' content='Google Pay Gully Cricket Cards Sharing App' />
-            <meta name='description' content='Best Google Pay Gully Cricket Cards Sharing App in the world' />
+            <meta name='apple-mobile-web-app-title' content='GooglePay Gully Cricket Game Cards [Giveaway] : Assured ₹51 to ₹201' />
+            <meta name='description' content='How to Collect Google Pay Gully Cricket Card - gully cricket gpay free cards , gully cricket gpay cards , you can Use for google play payment' />
+            <meta name="keywords" content="google pay gully cricket offer cashback rewards gpay assured rewards giveaway cards bunny toofan rocket smasher express finisher bijli kaptaan googly rockstar all cards give away" />
             <meta name='format-detection' content='telephone=no' />
             <meta name='mobile-web-app-capable' content='yes' />
             <meta name='msapplication-config' content='/icons/browserconfig.xml' />
             <meta name='msapplication-TileColor' content='#2B5797' />
             <meta name='msapplication-tap-highlight' content='no' />
             <meta name='theme-color' content='#000000' />
-            <title>Google Pay Gully Cricket Cards Sharing App</title>
+            <title>GooglePay Gully Cricket Game Cards [Giveaway] : Assured ₹51 to ₹201</title>
 
             <link rel='apple-touch-icon' href='/icons/apple-touch-icon.png' />
 
@@ -29,14 +30,14 @@ export default function MyApp({ Component, pageProps }) {
 
             <meta name='twitter:card' content='summary' />
             <meta name='twitter:url' content='https://google-pay-gully-cricket-cards-sharing-app.kmanikumarreddy.com' />
-            <meta name='twitter:title' content='Google Pay Gully Cricket Cards Sharing App' />
-            <meta name='twitter:description' content='Best Google Pay Gully Cricket Cards Sharing App in the world' />
+            <meta name='twitter:title' content='GooglePay Gully Cricket Game Cards [Giveaway] : Assured ₹51 to ₹201' />
+            <meta name='twitter:description' content='How to Collect Google Pay Gully Cricket Card - gully cricket gpay free cards , gully cricket gpay cards , you can Use for google play payment' />
             <meta name='twitter:image' content='https://google-pay-gully-cricket-cards-sharing-app.kmanikumarreddy.com/icons/android-chrome-192x192.png' />
             <meta name='twitter:creator' content='@KManiKumarReddy' />
             <meta property='og:type' content='website' />
-            <meta property='og:title' content='Google Pay Gully Cricket Cards Sharing App' />
-            <meta property='og:description' content='Best Google Pay Gully Cricket Cards Sharing App in the world' />
-            <meta property='og:site_name' content='Google Pay Gully Cricket Cards Sharing App' />
+            <meta property='og:title' content='GooglePay Gully Cricket Game Cards [Giveaway] : Assured ₹51 to ₹201' />
+            <meta property='og:description' content='How to Collect Google Pay Gully Cricket Card - gully cricket gpay free cards , gully cricket gpay cards , you can Use for google play payment' />
+            <meta property='og:site_name' content='GooglePay Gully Cricket Game Cards [Giveaway] : Assured ₹51 to ₹201' />
             <meta property='og:url' content='https://google-pay-gully-cricket-cards-sharing-app.kmanikumarreddy.com' />
             <meta property='og:image' content='https://google-pay-gully-cricket-cards-sharing-app.kmanikumarreddy.com/icons/apple-touch-icon.png' />
 
